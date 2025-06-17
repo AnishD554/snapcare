@@ -8,7 +8,7 @@ import markdown
 app = Flask(__name__)
 
 # Replace with your actual DeepSeek API key
-API_KEY = "sk-9e7cd59c7d2c4021aee68cf7cb3d2d7f"
+API_KEY = API_KEY = os.environ.get("API_KEY")
 API_URL = "https://api.deepseek.com/v1/chat/completions"
 
 @app.route('/', methods=['GET', 'POST'])
