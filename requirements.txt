@@ -1,3 +1,5 @@
 flask
-openai
+requests
+markdown
+tensorflow  # only if you're using the real model
 Pillow
