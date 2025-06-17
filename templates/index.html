@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SnapCare – Symptom Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>SnapCare 🩺</h1>
+    <p>Upload a photo of a visible symptom (cut, rash, etc.) to get quick health advice.</p>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" capture="environment" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <h2>🔎 Detected Condition: {{ condition }}</h2>
+        <img src="{{ image }}" alt="Uploaded Symptom Image">
+        <h3>💡 Advice:</h3>
+        <div class="result">{{ result | safe }}</div>
+    {% endif %}
+</body>
+</html>
