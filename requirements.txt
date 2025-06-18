@@ -1,5 +1,4 @@
 flask
 requests
 markdown
-tflite-runtime
 Pillow
