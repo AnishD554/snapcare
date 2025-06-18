@@ -1,2 +1,2 @@
-normal
-Pink Eye
+0 Normal Eye
+1 Pink Eye
